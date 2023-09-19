@@ -3,11 +3,11 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 );
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES (
-  'Gabumon', '2020-11-15', 2, true, 8
+  'Gabumon', '2018-11-15', 2, true, 8
 );
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES (
-  'Pikachu', '2020-01-07', 1, false, 15.04
+  'Pikachu', '2021-01-07', 1, false, 15.04
 );
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES (
