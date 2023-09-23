@@ -90,7 +90,6 @@ WHERE s.name = 'Pokemon';
 -- List all owners and their animals, including those that don't own any animals.
 SELECT O.full_name, a.name
 FROM owners O
-
 -- How many animals are there per species?
 SELECT s.name, COUNT(*) as num_animals
 FROM animals a
