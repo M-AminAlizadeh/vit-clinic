@@ -66,3 +66,19 @@ FOREIGN KEY(medical_history_id)
 REFERENCES medical_histories(id),
 ADD CONSTRAINT unique_medical_history_id
 UNIQUE (medical_history_id);
+
+-- create junction (bridge) table
+create table histories_treatments(
+  id int GENERATED ALWAYS AS IDENTITY,
+  medical_history_id int,
+  treatment_id int,
+  PRIMARY KEY(id)
+);
+
+ALTER TABLE histories_treatments
+ADD CONSTRAINT fk_medical_history_id
+FOREIGN KEY(medical_history_id)
+REFERENCES medical_histories(id),
+ADD CONSTRAINT fk_treatment_id
+FOREIGN KEY(treatment_id)
+REFERENCES treatments(id);
