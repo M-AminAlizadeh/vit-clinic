@@ -42,3 +42,27 @@ create table invoices(
   medical_history_id int,
   PRIMARY KEY(id)
 );
+
+
+-- add foreign keys
+ALTER TABLE medical_histories
+ADD CONSTRAINT fk_patient_id
+FOREIGN KEY(patient_id)
+REFERENCES patients(id);
+
+ALTER TABLE invoice_items
+ADD CONSTRAINT fk_invoice_id
+FOREIGN KEY(invoice_id)
+REFERENCES invoices(id);
+
+ALTER TABLE invoice_items
+ADD CONSTRAINT fk_treatment_id
+FOREIGN KEY(treatment_id)
+REFERENCES treatments(id);
+
+ALTER TABLE invoices
+ADD CONSTRAINT fk_medical_history_id
+FOREIGN KEY(medical_history_id)
+REFERENCES medical_histories(id),
+ADD CONSTRAINT unique_medical_history_id
+UNIQUE (medical_history_id);
