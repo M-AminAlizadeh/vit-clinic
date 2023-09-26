@@ -82,3 +82,12 @@ REFERENCES medical_histories(id),
 ADD CONSTRAINT fk_treatment_id
 FOREIGN KEY(treatment_id)
 REFERENCES treatments(id);
+
+-- add indices
+CREATE INDEX medical_histories_patient_id ON medical_histories(patient_id ASC);
+CREATE INDEX invoices_medical_history_id ON invoices(medical_history_id ASC);
+CREATE INDEX invoice_items_invoice_id ON invoice_items(invoice_id ASC);
+CREATE INDEX invoice_items_treatment_id ON invoice_items(treatment_id ASC);
+
+CREATE INDEX histories_treatments_medical_history_id ON histories_treatments(medical_history_id ASC);
+CREATE INDEX histories_treatments_treatment_id ON histories_treatments(treatment_id ASC);
