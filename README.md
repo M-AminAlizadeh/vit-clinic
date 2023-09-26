@@ -19,7 +19,10 @@
 
 # 📖 [vit clinic] <a name="about-project"></a>
 
-**[vit clinic]** is a about database usng sql language and postgres sql 
+**[vit clinic]** is a about database usng sql language and postgres sql
+
+This is the diagram of the project
+![Diagram image](./diagram/database-diagram.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
